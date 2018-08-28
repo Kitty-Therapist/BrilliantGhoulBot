@@ -23,10 +23,11 @@ class serversuggest:
                 message = await channel.send(embed=embed)
                 await message.add_reaction(upvote)
                 await message.add_reaction(downvote)
+                await ctx.send("Successfully sent your suggestion through, thanks for your feedback!")
             except discord.Forbidden:
                 await ctx.send("I was not able to send to the suggestion channel, make sure I have permissions.")
         else: 
-            await ctx.send("There's nothing there, and I can't give a empty suggestion.")
+            await ctx.send("Use +suggest <content>, I can't send an empty suggestion.")
 
 def setup(bot):
     bot.add_cog(serversuggest(bot))
