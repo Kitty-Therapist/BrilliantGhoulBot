@@ -4,7 +4,7 @@ import datetime
 from discord.ext import commands
 from discord import utils
 
-class serversuggest: 
+class serversuggest(commands.Cog): 
     """This cog includes the ability to allow Bug Hunters to submit to Trello."""
     def __init__(self, bot):
         self.bot = bot
